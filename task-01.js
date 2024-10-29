@@ -8,7 +8,7 @@ const cart = [
     type: "jeans",
     price: 27,
     color: "blue",
-  }
+  },
 ];
 
 const hatProduct = {
@@ -18,10 +18,8 @@ const hatProduct = {
 };
 
 const addProduct = (cart, product) => {
-
+  return [...cart, product];
 };
-
-
 
 const updatedCart = addProduct(cart, hatProduct);
 

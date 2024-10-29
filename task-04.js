@@ -42,7 +42,14 @@ const products = [
 ];
 
 const applyDiscount = (products, discount) => {
+  const discountedProducts = [];
 
+  for (let i = 0; i < products.length; i++) {
+    const product = products[i];
+    const discountedPrice = product.price - (product.price * discount) / 100;
+    discountedProducts.push({ ...product, price: discountedPrice });
+  }
+  return discountedProducts;
 };
 
 console.log(applyDiscount(products, 10));

@@ -5,7 +5,11 @@ const person = {
 };
 
 const addFullName = (person) => {
- 
+  const newPerson = {
+    ...person,
+    fullName: `${person.firstName} ${person.lastName}`,
+  };
+  return newPerson;
 };
 
 console.log(addFullName(person));
